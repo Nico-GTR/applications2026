@@ -3041,9 +3041,9 @@ const DASHBOARD_DATA = {
     { "company": "Samsung", "headcount": 267000, "applied": 1, "interviews": 0 },
     { "company": "Stellantis", "headcount": 258700, "applied": 2, "interviews": 0 },
     { "company": "HSBC", "headcount": 211500, "applied": 2, "interviews": 0 },
-    { "company": "Google", "headcount": 190800, "applied": 2, "interviews": 1 },
+    { "company": "Google", "headcount": 190800, "applied": 2, "interviews": 3 },
     { "company": "BNP Paribas", "headcount": 178500, "applied": 6, "interviews": 0 },
     { "company": "EDF", "headcount": 172000, "applied": 1, "interviews": 0 },
-    { "company": "Airbus", "headcount": 165600, "applied": 10, "interviews": 1 }
+    { "company": "Airbus", "headcount": 165600, "applied": 10, "interviews": 2 }
   ]
 };

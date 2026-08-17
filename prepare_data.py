@@ -364,12 +364,20 @@ def main():
     conv = sorted(conv, key=lambda x: (-x["rate"], -x["applied"]))[:12]
 
     # Plus grosses entreprises visées (par effectif réel, pas par volume de candidatures)
+    # `comp_interviews` compte des candidatures distinctes ayant atteint l'entretien,
+    # pas des tours d'entretien : quand un même processus a comporté plusieurs tours,
+    # ça ne se voit pas dans ce chiffre (ex. Airbus/Google : un seul poste a avancé,
+    # mais sur 2 et 3 tours d'entretien respectivement). Précisé à la main ici.
+    INTERVIEW_ROUNDS_OVERRIDE = {
+        "Airbus": 2,
+        "Google": 3,
+    }
     big_employers = [
         {
             "company": c,
             "headcount": headcount,
             "applied": companies[c],
-            "interviews": comp_interviews.get(c, 0),
+            "interviews": INTERVIEW_ROUNDS_OVERRIDE.get(c, comp_interviews.get(c, 0)),
         }
         for c, headcount in COMPANY_HEADCOUNT.items()
         if c in companies
