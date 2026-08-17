@@ -96,6 +96,30 @@ COMPANY_RULES = [
 # peuvent porter ce statut dans l'historique).
 FINAL_OUTCOME_COMPANY = "Nokia"
 
+# Effectifs mondiaux approximatifs (communication publique des groupes, 2025) des
+# plus grandes entreprises visées. Cette donnée n'existe pas dans le CSV source
+# (ce n'est pas une métrique dérivée des candidatures) : renseignée à la main,
+# uniquement pour les entreprises assez grandes pour être des candidates
+# plausibles au "top 10 par effectif" — un ordre de grandeur, pas un chiffre
+# garanti au salarié près.
+COMPANY_HEADCOUNT = {
+    "Amazon": 1_576_000,
+    "Accenture": 779_000,
+    "Deloitte": 473_000,
+    "Samsung": 267_000,
+    "Stellantis": 258_700,
+    "HSBC": 211_500,
+    "Google": 190_800,
+    "BNP Paribas": 178_500,
+    "EDF": 172_000,
+    "Airbus": 165_600,
+    "Saint-Gobain": 162_000,
+    "Schneider Electric": 160_000,
+    "Allianz": 156_000,
+    "BMW Group": 154_500,
+    "Renault": 100_900,
+}
+
 # Noms canoniques propres pour les entreprises rencontrées une seule fois
 # (corrige juste la casse / les fautes éventuelles).
 CANON_SINGLE = {
@@ -339,6 +363,19 @@ def main():
             })
     conv = sorted(conv, key=lambda x: (-x["rate"], -x["applied"]))[:12]
 
+    # Plus grosses entreprises visées (par effectif réel, pas par volume de candidatures)
+    big_employers = [
+        {
+            "company": c,
+            "headcount": headcount,
+            "applied": companies[c],
+            "interviews": comp_interviews.get(c, 0),
+        }
+        for c, headcount in COMPANY_HEADCOUNT.items()
+        if c in companies
+    ]
+    big_employers = sorted(big_employers, key=lambda x: -x["headcount"])[:10]
+
     # Issue finale : l'offre effectivement acceptée
     outcome_candidates = [
         r for r in records
@@ -409,6 +446,7 @@ def main():
         "companyConversion": conv,
         "applications": apps_out,
         "outcome": outcome,
+        "bigEmployers": big_employers,
     }
 
     with open(OUT_JS, "w", encoding="utf-8") as f:

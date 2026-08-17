@@ -3033,5 +3033,17 @@ const DASHBOARD_DATA = {
     "role": "Apprenticeship Artificial Intelligence",
     "applied": "24/05/2026",
     "responseDays": 10
-  }
+  },
+  "bigEmployers": [
+    { "company": "Amazon", "headcount": 1576000, "applied": 1, "interviews": 0 },
+    { "company": "Accenture", "headcount": 779000, "applied": 1, "interviews": 1 },
+    { "company": "Deloitte", "headcount": 473000, "applied": 1, "interviews": 0 },
+    { "company": "Samsung", "headcount": 267000, "applied": 1, "interviews": 0 },
+    { "company": "Stellantis", "headcount": 258700, "applied": 2, "interviews": 0 },
+    { "company": "HSBC", "headcount": 211500, "applied": 2, "interviews": 0 },
+    { "company": "Google", "headcount": 190800, "applied": 2, "interviews": 1 },
+    { "company": "BNP Paribas", "headcount": 178500, "applied": 6, "interviews": 0 },
+    { "company": "EDF", "headcount": 172000, "applied": 1, "interviews": 0 },
+    { "company": "Airbus", "headcount": 165600, "applied": 10, "interviews": 1 }
+  ]
 };

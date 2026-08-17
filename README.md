@@ -14,6 +14,7 @@ Pas de framework, pas de build : une page HTML/CSS/JS statique, alimentée par d
 - **Activité dans le temps** — série hebdomadaire + cumul, calendrier façon heatmap GitHub
 - **Délais de réponse** — distribution en buckets, moyenne/médiane
 - **Top entreprises** & **taux de conversion en entretien** par entreprise
+- **Les 10 plus grosses entreprises visées** — classement par effectif mondial réel (donnée externe, curée à la main), pas par volume de candidatures
 - **Thèmes de postes** visés (Data Scientist, ML, IA générative, etc.), extraits par mots-clés
 - **Table interactive** — recherche et filtres par statut
 - Thème clair / sombre, entièrement responsive
@@ -47,6 +48,8 @@ Le CSV brut n'est **pas** versionné (il contient des données personnelles). Po
 3. Rechargez `dashboard.html`.
 
 Le script regroupe automatiquement les variantes de noms d'entreprises (ex. filiales, fautes de frappe), reconstruit le funnel depuis l'historique d'actions, et calcule les KPIs, délais de réponse, thèmes de postes, etc.
+
+Deux informations ne viennent pas du CSV et sont renseignées à la main dans `prepare_data.py` : l'entreprise dont l'offre a été acceptée (`FINAL_OUTCOME_COMPANY`), et les effectifs mondiaux approximatifs des plus grandes entreprises visées (`COMPANY_HEADCOUNT`, sources publiques 2025).
 
 ## Confidentialité
 

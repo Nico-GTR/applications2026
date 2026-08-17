@@ -127,14 +127,14 @@
   .funnel { display: flex; flex-direction: column; gap: 12px; }
   .funnel-row { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 16px; }
   .funnel-label { font-size: 13px; color: var(--text-dim); font-weight: 500; }
-  .funnel-bar-wrap { position: relative; height: 42px; }
+  .funnel-bar-wrap { display: flex; align-items: center; gap: 10px; height: 42px; }
   .funnel-bar {
     height: 100%; border-radius: 10px; display: flex; align-items: center; padding: 0 14px;
-    color: #fff; font-weight: 700; font-size: 14px; min-width: 54px;
+    color: #fff; font-weight: 700; font-size: 14px; min-width: 46px; flex: 0 0 auto;
     background: linear-gradient(90deg, var(--accent), var(--accent-2));
     transition: width 1s cubic-bezier(.22,1,.36,1); box-shadow: 0 4px 16px rgba(124,140,255,.22);
   }
-  .funnel-bar .pct { margin-left: auto; font-size: 12px; font-weight: 500; opacity: .85; }
+  .funnel-pct { font-size: 12px; font-weight: 600; color: var(--text-faint); white-space: nowrap; flex-shrink: 0; }
   .funnel-bar.s2 { background: linear-gradient(90deg, #5b6bf0, #7c8cff); }
   .funnel-bar.s3 { background: linear-gradient(90deg, #7c8cff, var(--accent-2)); }
   .funnel-bar.s4 { background: linear-gradient(90deg, var(--green), #5eead4); box-shadow: 0 4px 16px rgba(52,211,153,.25); }
@@ -213,6 +213,7 @@
   .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
   .legend .it { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-dim); }
   .legend .sw { width: 11px; height: 11px; border-radius: 3px; }
+  .chart-footnote { font-size: 11.5px; color: var(--text-faint); margin-top: 12px; }
 
   footer { margin-top: 40px; text-align: center; color: var(--text-faint); font-size: 12px; }
 
@@ -320,8 +321,16 @@
       <div class="chart-box" id="themeBox"><canvas id="themeChart"></canvas></div>
     </div>
 
-    <!-- Heatmap -->
+    <!-- Big employers -->
     <div class="card col-12 fade" style="animation-delay:.55s">
+      <div class="card-head"><div><div class="card-title">Les 10 plus grosses entreprises visées</div>
+        <div class="card-sub">Classées par effectif mondial réel, pas par nombre de candidatures</div></div></div>
+      <div class="chart-box" id="bigBox"><canvas id="bigChart"></canvas></div>
+      <p class="chart-footnote">Effectifs mondiaux approximatifs (communication publique des groupes, 2025), à titre indicatif — échelle logarithmique.</p>
+    </div>
+
+    <!-- Heatmap -->
+    <div class="card col-12 fade" style="animation-delay:.6s">
       <div class="card-head"><div><div class="card-title">Calendrier d'activité</div>
         <div class="card-sub">Intensité quotidienne des candidatures</div></div></div>
       <div class="heat-scroll">
@@ -339,19 +348,19 @@
     </div>
 
     <!-- weekday + hour -->
-    <div class="card col-6 fade" style="animation-delay:.6s">
+    <div class="card col-6 fade" style="animation-delay:.65s">
       <div class="card-head"><div><div class="card-title">Rythme par jour de la semaine</div>
         <div class="card-sub">Quand les candidatures sont envoyées</div></div></div>
       <div class="chart-box h-260"><canvas id="weekdayChart"></canvas></div>
     </div>
-    <div class="card col-6 fade" style="animation-delay:.65s">
+    <div class="card col-6 fade" style="animation-delay:.7s">
       <div class="card-head"><div><div class="card-title">Taux de conversion en entretien</div>
         <div class="card-sub">Entreprises avec ≥ 3 candidatures</div></div></div>
       <div class="chart-box h-260"><canvas id="convChart"></canvas></div>
     </div>
 
     <!-- Table -->
-    <div class="card col-12 fade" style="animation-delay:.7s">
+    <div class="card col-12 fade" style="animation-delay:.75s">
       <div class="card-head" style="align-items:flex-start;">
         <div><div class="card-title">Détail des candidatures</div>
         <div class="card-sub"><span id="tblCount" class="tbl-count"></span></div></div>
@@ -432,9 +441,8 @@ function fillFunnel(){
     return `<div class="funnel-row">
       <div class="funnel-label">${f.stage}</div>
       <div class="funnel-bar-wrap">
-        <div class="funnel-bar ${cls[i]}" style="width:0%" data-w="${w}">
-          ${f.count}<span class="pct">${pct}</span>
-        </div>
+        <div class="funnel-bar ${cls[i]}" style="width:0%" data-w="${w}">${f.count}</div>
+        <span class="funnel-pct">${pct}</span>
       </div></div>`;
   }).join('');
   requestAnimationFrame(()=> setTimeout(()=>{
@@ -545,6 +553,28 @@ function buildCharts(){
         y:{grid:{display:false}, ticks:{color:t.dim, font:{size:12}}}}}
   }));
 
+  /* big employers — ranked by real headcount, log scale (Amazon dwarfs everything on linear) */
+  const be = D.bigEmployers || [];
+  if (be.length){
+    document.getElementById('bigBox').style.height = (be.length*36+24)+'px';
+    const fmtHeadcount = n => n>=1e6 ? (n/1e6).toFixed(1).replace(/\.0$/,'')+' M' : Math.round(n/1000)+' k';
+    charts.push(new Chart(document.getElementById('bigChart'), {
+      type:'bar',
+      data:{ labels:be.map(x=>x.company), datasets:[{ data:be.map(x=>x.headcount),
+        backgroundColor:hexA(t.accent,.7), borderRadius:5, barThickness:18 }]},
+      options:{...baseOpts(t), indexAxis:'y',
+        plugins:{...baseOpts(t).plugins, tooltip:{...baseOpts(t).plugins.tooltip,
+          callbacks:{
+            label: c => ` ≈ ${c.parsed.x.toLocaleString('fr-FR')} salariés dans le monde`,
+            afterLabel: c => `${be[c.dataIndex].applied} candidature(s)${be[c.dataIndex].interviews?' · '+be[c.dataIndex].interviews+' entretien(s)':''}`,
+          }}},
+        scales:{
+          x:{ type:'logarithmic', min:100000, grid:{color:t.grid}, ticks:{color:t.faint, font:{size:11}, callback:v=>fmtHeadcount(v)} },
+          y:{ grid:{display:false}, ticks:{color:t.dim, font:{size:12}} },
+        }}
+    }));
+  }
+
   /* weekday */
   const wd = D.byWeekday;
   charts.push(new Chart(document.getElementById('weekdayChart'), {
@@ -646,6 +676,13 @@ function renderTable(){
 
 /* ---------- init ---------- */
 fillMeta(); fillFunnel(); fillOutcome(); buildCharts(); buildHeat(); renderTable();
+
+// Chart.js measures axis label widths at build time; if the Inter webfont
+// hadn't finished loading yet it under-reserves space and long labels
+// (e.g. "Dassault Systèmes") get clipped. Rebuild once it's actually ready.
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(()=> buildCharts());
+}
 
 document.getElementById('search').addEventListener('input', e=>{ curSearch=e.target.value; renderTable(); });
 document.getElementById('statusSeg').addEventListener('click', e=>{
