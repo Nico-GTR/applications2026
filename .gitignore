@@ -1,0 +1,12 @@
+# Données brutes (informations personnelles issues du CSV maestro) — ne jamais publier.
+*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

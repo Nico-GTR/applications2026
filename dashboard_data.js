@@ -1,0 +1,3037 @@
+// Généré automatiquement par prepare_data.py — ne pas éditer à la main.
+const DASHBOARD_DATA = {
+  "meta": {
+    "total": 270,
+    "uniqueCompanies": 78,
+    "duplicates": 1,
+    "dateMin": "13/03/2026",
+    "dateMax": "13/07/2026",
+    "generatedAt": "15/08/2026 18:00"
+  },
+  "kpis": {
+    "total": 270,
+    "uniqueCompanies": 78,
+    "interviews": 23,
+    "interviewRate": 8.5,
+    "secondInterviews": 10,
+    "offers": 7,
+    "rejected": 128,
+    "rejectRate": 47.4,
+    "pending": 136,
+    "avgResponse": 43.3,
+    "medianResponse": 30
+  },
+  "funnel": [
+    {
+      "stage": "Candidature envoyée",
+      "count": 270
+    },
+    {
+      "stage": "1er entretien",
+      "count": 23
+    },
+    {
+      "stage": "2ème entretien",
+      "count": 10
+    },
+    {
+      "stage": "Offre reçue",
+      "count": 7
+    }
+  ],
+  "statusDistribution": [
+    {
+      "status": "Refusé",
+      "count": 128
+    },
+    {
+      "status": "J'ai postulé",
+      "count": 124
+    },
+    {
+      "status": "J'ai un 1er entretien",
+      "count": 9
+    },
+    {
+      "status": "Je suis pris",
+      "count": 6
+    },
+    {
+      "status": "J'ai un 2ème entretien",
+      "count": 3
+    }
+  ],
+  "topCompanies": [
+    {
+      "company": "Thales",
+      "count": 31,
+      "interviews": 2
+    },
+    {
+      "company": "Dassault Systèmes",
+      "count": 28,
+      "interviews": 1
+    },
+    {
+      "company": "Safran",
+      "count": 28,
+      "interviews": 4
+    },
+    {
+      "company": "Valeo",
+      "count": 15,
+      "interviews": 0
+    },
+    {
+      "company": "Crédit Agricole",
+      "count": 15,
+      "interviews": 1
+    },
+    {
+      "company": "Airbus",
+      "count": 10,
+      "interviews": 1
+    },
+    {
+      "company": "AXA",
+      "count": 9,
+      "interviews": 0
+    },
+    {
+      "company": "Renault",
+      "count": 7,
+      "interviews": 0
+    },
+    {
+      "company": "BNP Paribas",
+      "count": 6,
+      "interviews": 0
+    },
+    {
+      "company": "GE HealthCare",
+      "count": 5,
+      "interviews": 1
+    },
+    {
+      "company": "MBDA",
+      "count": 5,
+      "interviews": 1
+    },
+    {
+      "company": "Amundi",
+      "count": 5,
+      "interviews": 0
+    },
+    {
+      "company": "Framatome",
+      "count": 4,
+      "interviews": 1
+    },
+    {
+      "company": "Natixis",
+      "count": 4,
+      "interviews": 0
+    },
+    {
+      "company": "ArianeGroup",
+      "count": 4,
+      "interviews": 1
+    }
+  ],
+  "timelineDaily": [
+    {
+      "date": "2026-03-13",
+      "count": 12
+    },
+    {
+      "date": "2026-03-17",
+      "count": 10
+    },
+    {
+      "date": "2026-03-21",
+      "count": 9
+    },
+    {
+      "date": "2026-03-23",
+      "count": 1
+    },
+    {
+      "date": "2026-03-24",
+      "count": 1
+    },
+    {
+      "date": "2026-03-25",
+      "count": 21
+    },
+    {
+      "date": "2026-03-31",
+      "count": 12
+    },
+    {
+      "date": "2026-04-04",
+      "count": 12
+    },
+    {
+      "date": "2026-04-07",
+      "count": 9
+    },
+    {
+      "date": "2026-04-10",
+      "count": 4
+    },
+    {
+      "date": "2026-04-14",
+      "count": 12
+    },
+    {
+      "date": "2026-04-19",
+      "count": 13
+    },
+    {
+      "date": "2026-04-24",
+      "count": 8
+    },
+    {
+      "date": "2026-04-28",
+      "count": 15
+    },
+    {
+      "date": "2026-04-29",
+      "count": 3
+    },
+    {
+      "date": "2026-05-01",
+      "count": 12
+    },
+    {
+      "date": "2026-05-03",
+      "count": 1
+    },
+    {
+      "date": "2026-05-06",
+      "count": 5
+    },
+    {
+      "date": "2026-05-15",
+      "count": 13
+    },
+    {
+      "date": "2026-05-24",
+      "count": 21
+    },
+    {
+      "date": "2026-05-29",
+      "count": 21
+    },
+    {
+      "date": "2026-06-03",
+      "count": 22
+    },
+    {
+      "date": "2026-06-09",
+      "count": 18
+    },
+    {
+      "date": "2026-06-11",
+      "count": 11
+    },
+    {
+      "date": "2026-06-30",
+      "count": 1
+    },
+    {
+      "date": "2026-07-02",
+      "count": 2
+    },
+    {
+      "date": "2026-07-13",
+      "count": 1
+    }
+  ],
+  "weeklySeries": [
+    {
+      "label": "9 mars",
+      "count": 12,
+      "cumulative": 12
+    },
+    {
+      "label": "16 mars",
+      "count": 19,
+      "cumulative": 31
+    },
+    {
+      "label": "23 mars",
+      "count": 23,
+      "cumulative": 54
+    },
+    {
+      "label": "30 mars",
+      "count": 24,
+      "cumulative": 78
+    },
+    {
+      "label": "6 avr.",
+      "count": 13,
+      "cumulative": 91
+    },
+    {
+      "label": "13 avr.",
+      "count": 25,
+      "cumulative": 116
+    },
+    {
+      "label": "20 avr.",
+      "count": 8,
+      "cumulative": 124
+    },
+    {
+      "label": "27 avr.",
+      "count": 31,
+      "cumulative": 155
+    },
+    {
+      "label": "4 mai",
+      "count": 5,
+      "cumulative": 160
+    },
+    {
+      "label": "11 mai",
+      "count": 13,
+      "cumulative": 173
+    },
+    {
+      "label": "18 mai",
+      "count": 21,
+      "cumulative": 194
+    },
+    {
+      "label": "25 mai",
+      "count": 21,
+      "cumulative": 215
+    },
+    {
+      "label": "1 juin",
+      "count": 22,
+      "cumulative": 237
+    },
+    {
+      "label": "8 juin",
+      "count": 29,
+      "cumulative": 266
+    },
+    {
+      "label": "29 juin",
+      "count": 3,
+      "cumulative": 269
+    },
+    {
+      "label": "13 juil.",
+      "count": 1,
+      "cumulative": 270
+    }
+  ],
+  "byWeekday": [
+    {
+      "day": "Lundi",
+      "count": 2
+    },
+    {
+      "day": "Mardi",
+      "count": 78
+    },
+    {
+      "day": "Mercredi",
+      "count": 51
+    },
+    {
+      "day": "Jeudi",
+      "count": 13
+    },
+    {
+      "day": "Vendredi",
+      "count": 70
+    },
+    {
+      "day": "Samedi",
+      "count": 21
+    },
+    {
+      "day": "Dimanche",
+      "count": 35
+    }
+  ],
+  "byHour": [
+    {
+      "hour": 0,
+      "count": 0
+    },
+    {
+      "hour": 1,
+      "count": 0
+    },
+    {
+      "hour": 2,
+      "count": 0
+    },
+    {
+      "hour": 3,
+      "count": 0
+    },
+    {
+      "hour": 4,
+      "count": 0
+    },
+    {
+      "hour": 5,
+      "count": 9
+    },
+    {
+      "hour": 6,
+      "count": 18
+    },
+    {
+      "hour": 7,
+      "count": 42
+    },
+    {
+      "hour": 8,
+      "count": 25
+    },
+    {
+      "hour": 9,
+      "count": 14
+    },
+    {
+      "hour": 10,
+      "count": 0
+    },
+    {
+      "hour": 11,
+      "count": 1
+    },
+    {
+      "hour": 12,
+      "count": 0
+    },
+    {
+      "hour": 13,
+      "count": 26
+    },
+    {
+      "hour": 14,
+      "count": 17
+    },
+    {
+      "hour": 15,
+      "count": 1
+    },
+    {
+      "hour": 16,
+      "count": 46
+    },
+    {
+      "hour": 17,
+      "count": 31
+    },
+    {
+      "hour": 18,
+      "count": 8
+    },
+    {
+      "hour": 19,
+      "count": 8
+    },
+    {
+      "hour": 20,
+      "count": 16
+    },
+    {
+      "hour": 21,
+      "count": 8
+    },
+    {
+      "hour": 22,
+      "count": 0
+    },
+    {
+      "hour": 23,
+      "count": 0
+    }
+  ],
+  "responseBuckets": [
+    {
+      "bucket": "≤ 3 j",
+      "count": 16
+    },
+    {
+      "bucket": "4–7 j",
+      "count": 18
+    },
+    {
+      "bucket": "8–14 j",
+      "count": 13
+    },
+    {
+      "bucket": "15–30 j",
+      "count": 27
+    },
+    {
+      "bucket": "> 30 j",
+      "count": 70
+    }
+  ],
+  "roleThemes": [
+    {
+      "theme": "IA (général)",
+      "count": 120
+    },
+    {
+      "theme": "Data Scientist",
+      "count": 60
+    },
+    {
+      "theme": "Machine Learning",
+      "count": 47
+    },
+    {
+      "theme": "Dév. logiciel",
+      "count": 43
+    },
+    {
+      "theme": "Data Engineer",
+      "count": 29
+    },
+    {
+      "theme": "IA générative / LLM",
+      "count": 24
+    },
+    {
+      "theme": "Data Analyst",
+      "count": 21
+    },
+    {
+      "theme": "Computer Vision",
+      "count": 15
+    },
+    {
+      "theme": "Robotique",
+      "count": 12
+    },
+    {
+      "theme": "DevOps / Cloud",
+      "count": 4
+    }
+  ],
+  "companyConversion": [
+    {
+      "company": "AMIAD",
+      "applied": 3,
+      "interviews": 2,
+      "rate": 67.0
+    },
+    {
+      "company": "Moët Hennessy",
+      "applied": 3,
+      "interviews": 1,
+      "rate": 33.0
+    },
+    {
+      "company": "Framatome",
+      "applied": 4,
+      "interviews": 1,
+      "rate": 25.0
+    },
+    {
+      "company": "ArianeGroup",
+      "applied": 4,
+      "interviews": 1,
+      "rate": 25.0
+    },
+    {
+      "company": "Nokia",
+      "applied": 4,
+      "interviews": 1,
+      "rate": 25.0
+    },
+    {
+      "company": "GE HealthCare",
+      "applied": 5,
+      "interviews": 1,
+      "rate": 20.0
+    },
+    {
+      "company": "MBDA",
+      "applied": 5,
+      "interviews": 1,
+      "rate": 20.0
+    },
+    {
+      "company": "Safran",
+      "applied": 28,
+      "interviews": 4,
+      "rate": 14.0
+    },
+    {
+      "company": "Airbus",
+      "applied": 10,
+      "interviews": 1,
+      "rate": 10.0
+    },
+    {
+      "company": "Crédit Agricole",
+      "applied": 15,
+      "interviews": 1,
+      "rate": 7.0
+    },
+    {
+      "company": "Thales",
+      "applied": 31,
+      "interviews": 2,
+      "rate": 6.0
+    },
+    {
+      "company": "Dassault Systèmes",
+      "applied": 28,
+      "interviews": 1,
+      "rate": 4.0
+    }
+  ],
+  "applications": [
+    {
+      "company": "Saint-Gobain",
+      "role": "Alternance - Pilote benchmark capteurs industriels F/H",
+      "status": "J'ai un 1er entretien",
+      "applied": "13/07/2026",
+      "appliedISO": "2026-07-13",
+      "maxStage": 2,
+      "responseDays": 4
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "ALTERNANCE - Data Scientist H/F",
+      "status": "J'ai postulé",
+      "applied": "02/07/2026",
+      "appliedISO": "2026-07-02",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "GRDF",
+      "role": "Ingénieur BIG DATA et IA",
+      "status": "J'ai postulé",
+      "applied": "02/07/2026",
+      "appliedISO": "2026-07-02",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Renault",
+      "role": "AP26 – BAC+5 - Ingénieur R&D IA - Systèmes de recommandation & Personnalisation (H/F)",
+      "status": "J'ai postulé",
+      "applied": "30/06/2026",
+      "appliedISO": "2026-06-30",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "EDF",
+      "role": "Assistante / Assistant ingénieur(e) en datascience et surveillance des matériels F/H",
+      "status": "Refusé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": 65
+    },
+    {
+      "company": "Stellantis",
+      "role": "Apprentissage : Data Analytics for Customers Satisfaction Surveys and Quality Targets management",
+      "status": "J'ai postulé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Decathlon",
+      "role": "Analytics Engineer/Data Analyst (f/m/d) - Data Pricing - Alternance",
+      "status": "J'ai postulé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Numberly",
+      "role": "Stage / alternance - Data Engineer",
+      "status": "J'ai postulé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-181499 – APPRENTISSAGE - Ingénieur Industriel - Vision industrielle assistée par l'IA",
+      "status": "J'ai postulé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur avant vente - Generative AI & transformation digitale (F/H)",
+      "status": "Refusé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": 65
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur en science des données CATIA (F/H)",
+      "status": "Refusé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": 65
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur données et Intelligence Artificielle (F/H)",
+      "status": "Refusé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": 65
+    },
+    {
+      "company": "Valeo",
+      "role": "Alternance - Data Scientist",
+      "status": "J'ai postulé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Valeo",
+      "role": "Alternance AI Research Engineer – Multiphysics E-Machine Simulation H/F",
+      "status": "Refusé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": 65
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "STAGE - Modèle de fondation pour la génération d'objets 3D (F/H)",
+      "status": "J'ai postulé",
+      "applied": "11/06/2026",
+      "appliedISO": "2026-06-11",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "ANSM",
+      "role": "Apprenti - Développement et expérimentation de solutions Vibe Coding (H/F)",
+      "status": "J'ai postulé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Decathlon",
+      "role": "Analytics Engineer/Data Analyst (f/m/d) - Data Pricing - Apprenticeship",
+      "status": "J'ai postulé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "ARaymond",
+      "role": "Alternance Data scientist",
+      "status": "J'ai postulé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "AXA",
+      "role": "ALTERNANCE - Actuariat Pricing & Data Modeling H/F",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 2
+    },
+    {
+      "company": "Candriam",
+      "role": "ESG Quant Analyst– Data & Model Focus - Alternance F/M",
+      "status": "J'ai postulé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Naval Group",
+      "role": "ALTERNANCE - Ingénieur DATA SCIENTIST domaine pesée-stabilité des bâtiments de surface - H/F",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 66
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "ALTERNANCE - Data Scientist H/F",
+      "status": "J'ai postulé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Valeo",
+      "role": "Apprenti(e) Ingénieur Conception Systèmes et Simulation (H/F)",
+      "status": "J'ai postulé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Consultant Logiciel Services, Sciences de données et IA (F/H)",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 66
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur Expérience générative & Agents IA (F/H)",
+      "status": "J'ai un 1er entretien",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 2,
+      "responseDays": 5
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur R&D Deep Learning - Aix-en-Provence (F/H)",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 66
+    },
+    {
+      "company": "BMW Group",
+      "role": "Alternant Data Scientist",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 66
+    },
+    {
+      "company": "BMW Group",
+      "role": "Alternant Analyste Asset Risk (F/H)",
+      "status": "J'ai postulé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur Data et Transformation Digitale – F/H",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 66
+    },
+    {
+      "company": "Thales",
+      "role": "Data Scientist - Recherche Operationnelle  F/H",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 5
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Recherche de chemins d’attaque par Reinforcement Learning F/H",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 66
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur IA et Automatisation - F/H (R0322089)",
+      "status": "Refusé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": 66
+    },
+    {
+      "company": "Innov8 Group",
+      "role": "Candidature spontanée",
+      "status": "J'ai postulé",
+      "applied": "09/06/2026",
+      "appliedISO": "2026-06-09",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Afterdata",
+      "role": "Stage / Alternance - Data scientist - Développeur(se) Python | Fintech",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 73
+    },
+    {
+      "company": "CGI",
+      "role": "J0626-0065 - Alternance - Ingénieur en intelligence artificielle F/H",
+      "status": "J'ai un 1er entretien",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 2,
+      "responseDays": 7
+    },
+    {
+      "company": "Nokia",
+      "role": "Apprentissage - Dev Logiciel / AI-ML / DevOps - RADIO 5G/6G",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-181044 – Alternance Ingénieur Informatique - Intelligence Artificielle, Data & Développement Logiciel",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "HSBC",
+      "role": "Alternance - Attribution de Performance",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 0
+    },
+    {
+      "company": "Safran",
+      "role": "2026-178608 – Alternance Data Analyst Supply Chain MRO",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Louis Vuitton",
+      "role": "Alternance - Assistant.e Business Performance Analyst",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 6
+    },
+    {
+      "company": "Syngenta",
+      "role": "Alternant Analyste de donnees et support digital",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Richemont",
+      "role": "Alternance - Média Data Analyst H/F",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 3
+    },
+    {
+      "company": "Safran",
+      "role": "2026-180458 – Apprenti(e) Ingénieur(e) Système d'Information, Data, Informatique",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-MKO-DO-APP-202063-180856 – Alternant(e) - Data Steward DO Manufacturing",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-180430 – ALTERNANCE - Chargé de projets Data",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "AXA",
+      "role": "Data analyst - risques opérationnels (F/H) alternance",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 3
+    },
+    {
+      "company": "Safran",
+      "role": "2026-180357 – Apprenti.e - Data Engineer continuité numérique",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 3
+    },
+    {
+      "company": "Safran",
+      "role": "2026-177931 – Alternance Développement et Industrialisation d'Outils Logiciels basés sur l'IA générative",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Publicis Media",
+      "role": "Alternance Septembre 2026 - Assistant AI & Automation Ops (H/F)",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "Alternance - Chargé(e) de missions data et environnement H/F",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "ALTERNANCE - DATA & reporting Notation corporate H/F",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 73
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "Alternance - Data Analyst H/F",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 73
+    },
+    {
+      "company": "Météo-France",
+      "role": "Apprentissage en intelligence artificielle F/H",
+      "status": "Je suis pris",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 4,
+      "responseDays": 5
+    },
+    {
+      "company": "CEA",
+      "role": "2026-40218 – Alternance Bac+3/4/5 - Développement d'outil de simulation pour détecteurs à comptage de photons H/F",
+      "status": "J'ai postulé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Framatome",
+      "role": "2026-26466 – Alternance - Ingénieur Data / IA F/H",
+      "status": "Refusé",
+      "applied": "03/06/2026",
+      "appliedISO": "2026-06-03",
+      "maxStage": 1,
+      "responseDays": 73
+    },
+    {
+      "company": "Safran",
+      "role": "2026-180091 – Apprenti-e Business Analyst – Configuration Moteur LEAP en service F/H",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-180437 – Apprenti-e Data Scientist - Data Services Factory F/H",
+      "status": "Refusé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": 8
+    },
+    {
+      "company": "Safran",
+      "role": "2026-178490 – Alternant(e) - Développement d'algorithmes d'analyse de données de vol F/H",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-180611 – Apprenti-e Chef de Projet – Jumeau Numérique Moteurs LEAP & CFM56 F/H",
+      "status": "Refusé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": 11
+    },
+    {
+      "company": "Safran",
+      "role": "2026-MKO-APP-200131-174215 – Alternant(e) Data analyst, Automatisation et Gestion de projets F/H",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "Apprenti(e) Data / Informatique SupplyChain F/H",
+      "status": "Refusé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": 15
+    },
+    {
+      "company": "Safran",
+      "role": "2026-176978 – Chargé d'innovation et fablab F/H",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Renault",
+      "role": "AP26 - BAC+5 - Business & Market Strategy Analyst (H/F)",
+      "status": "Refusé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": 5
+    },
+    {
+      "company": "Renault",
+      "role": "AP26 - Bac + 5 - Ingénieur Entraînement et Validation de Modèles d’IA (H/F)",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Renault",
+      "role": "AP26 - BAC +5 - Ingénieur IA & Transformation Digitale (H/F)",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "Développement d'outils numériques par approche Data/IA pour la durée de vie",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "DGA",
+      "role": "Développement et évaluation de modèle de machine learning pour l’analyse forensique appliquée à la prédiction de spectres des agents du risque chimique.",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "MBDA",
+      "role": "Ingénieur Data Scientist en Détection d'Anomalies F/H",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "CHANEL",
+      "role": "Alternance - AI/Data Engineer — Data Factory H/F/X - Mode - Septembre 2026",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-180209 – Alternance - Data Ingénieur & Analytic F/H",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Allianz",
+      "role": "TitreData Scientist F/H - Alternance",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Renault",
+      "role": "AP26 - BAC +5 - Apprenti ingénieur informatique (H/F)",
+      "status": "Refusé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": 0
+    },
+    {
+      "company": "Orange",
+      "role": "Alternance - IA Engineer F/H",
+      "status": "Refusé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": 0
+    },
+    {
+      "company": "AXA",
+      "role": "AI Engineer Analyst/ Apprentice",
+      "status": "J'ai postulé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur Solutions IA Generative pour les processus d'ingénierie systèmes (F/H)",
+      "status": "Refusé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": 3
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur développement IA pour la création d'expériences 3D intéractives (F/H)",
+      "status": "Refusé",
+      "applied": "29/05/2026",
+      "appliedISO": "2026-05-29",
+      "maxStage": 1,
+      "responseDays": 7
+    },
+    {
+      "company": "Sage",
+      "role": "Apprentice Data Scientist & AI Engineer",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 83
+    },
+    {
+      "company": "AG2R La Mondiale",
+      "role": "Alternance - Data Scientist F/H",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Hewlett Packard Enterprise",
+      "role": "Apprenti Ingénieur en intelligence artificielle (H/F)",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "HSBC",
+      "role": "Alternance Date Science - Asset Management (f/m/d)",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 10
+    },
+    {
+      "company": "Horizon Trading Solutions",
+      "role": "Alternance – Data Scientist IA & Documentation Technique (F/H)",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 83
+    },
+    {
+      "company": "Decathlon",
+      "role": "Junior Data Scientist (f/m/d) - Apprenticeship - Security Team",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Groupe SII",
+      "role": "Alternance Automatisation & IA",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Orange",
+      "role": "Alternant Chef de Produit Voice IA F/H",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 4
+    },
+    {
+      "company": "Nokia",
+      "role": "Apprenticeship Artificial Intelligence",
+      "status": "Je suis pris",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 4,
+      "responseDays": 10
+    },
+    {
+      "company": "Alstom",
+      "role": "Apprentice - AI‑Enabled Business Development & Presales Analyst",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Canal+",
+      "role": "ALTERNANCE - MLOPS - (F/H/X)",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Euronext",
+      "role": "Data analyst apprentice",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 83
+    },
+    {
+      "company": "Ubisoft",
+      "role": "Data Scientist Assistant - Alternance (12 mois) Septembre 2026 (F/H/NB)",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 5
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur en développement IA (F/H)",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 83
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Data Science & IA appliquées à la validation de données applicatives (F/H)",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE – Ingénieur IA & Développement d’Agents Intelligents (F/H)",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "Alternance – Ingénieur Intelligence Artificielle pour les Centres de Contrôle Satellites - (H/F)",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 83
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE – Développement d'une application d'intelligence artificielle - F/H",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 83
+    },
+    {
+      "company": "ALTEN",
+      "role": "Ingénieur Data - Postgre SQL - Alternance (H/F)",
+      "status": "J'ai postulé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur Data Science et IA - F/H (R0321582)",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 83
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Data Analyst F/H (R0327675)",
+      "status": "Refusé",
+      "applied": "24/05/2026",
+      "appliedISO": "2026-05-24",
+      "maxStage": 1,
+      "responseDays": 83
+    },
+    {
+      "company": "AXA",
+      "role": "Alternance - Spécialiste en IA générative et en informatique décisionnelle",
+      "status": "J'ai postulé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Valeo",
+      "role": "Apprenti(e) Junior Data Scientist H/F",
+      "status": "J'ai postulé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Valeo",
+      "role": "Alternance R&D H/F",
+      "status": "Refusé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": 92
+    },
+    {
+      "company": "Alstom",
+      "role": "Alternant - Transformation digitale & IA (H/F)",
+      "status": "Refusé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": 92
+    },
+    {
+      "company": "Airbus",
+      "role": "ALT 2026 - Demo DevOps (F/H)",
+      "status": "Refusé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": 7
+    },
+    {
+      "company": "Malakoff Humanis",
+      "role": "ALT2026-417 – Alternance – Data Science & MLOps pour les scores F/H",
+      "status": "J'ai postulé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Nokia",
+      "role": "MicroWave AI & Data analysis apprenticeship",
+      "status": "J'ai postulé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur Simulation Algos & IA - F/H (R0323166)",
+      "status": "Refusé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": 29
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Développeur / Data Scientist – Surveillance de l’Espace (SSA) - F/H",
+      "status": "Refusé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": 14
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur Data & IA Analyse de données enregistrées en vol - F/H",
+      "status": "Refusé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": 17
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur Machine Learning et Data scientist (F/H)",
+      "status": "Refusé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": 92
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE – Développement et intégration de l’Intelligence Artificielle dans les métiers d’ingénierie - F/H (R0315220)",
+      "status": "Refusé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": 29
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Expert en IA Générative appliquée à l'Ingénierie (F/H)",
+      "status": "J'ai postulé",
+      "applied": "15/05/2026",
+      "appliedISO": "2026-05-15",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Accenture",
+      "role": "Alternant – Song Data & AI, H/F",
+      "status": "J'ai un 1er entretien",
+      "applied": "06/05/2026",
+      "appliedISO": "2026-05-06",
+      "maxStage": 2,
+      "responseDays": 37
+    },
+    {
+      "company": "Richemont",
+      "role": "Alternance - Data Scientist (H/F)",
+      "status": "J'ai postulé",
+      "applied": "06/05/2026",
+      "appliedISO": "2026-05-06",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "AXA",
+      "role": "Alternance - Junior Data Scientist and Business Intelligence",
+      "status": "Refusé",
+      "applied": "06/05/2026",
+      "appliedISO": "2026-05-06",
+      "maxStage": 1,
+      "responseDays": 28
+    },
+    {
+      "company": "Valeo",
+      "role": "Apprenti(e) Supply Chain AI & Robotics initiative H/F",
+      "status": "J'ai postulé",
+      "applied": "06/05/2026",
+      "appliedISO": "2026-05-06",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Valeo",
+      "role": "Apprenti(e) Supply Chain AI & Robotics initiative H/F",
+      "status": "J'ai postulé",
+      "applied": "06/05/2026",
+      "appliedISO": "2026-05-06",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "Alternance – Ingénieur Navigation basée vision – (H/F) (R0322152)",
+      "status": "Refusé",
+      "applied": "03/05/2026",
+      "appliedISO": "2026-05-03",
+      "maxStage": 1,
+      "responseDays": 104
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "Alternant(e) - Business Data Analyst H/F",
+      "status": "Refusé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": 11
+    },
+    {
+      "company": "BNP Paribas",
+      "role": "Alternance - Data Scientist AI - H/F",
+      "status": "Refusé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": 106
+    },
+    {
+      "company": "Canal+",
+      "role": "ALTERNANCE - DATA ENGINEER - (F/H/X)",
+      "status": "Refusé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": 21
+    },
+    {
+      "company": "Richemont",
+      "role": "ALTERNANCE - Service Client Qualité Data Specialiste (H/F)",
+      "status": "J'ai postulé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "PONANT Cruises",
+      "role": "Alternant Data Engineering H/F",
+      "status": "J'ai un 1er entretien",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 2,
+      "responseDays": 76
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "ALTERNANCE - Data Analyst / Data Scientist H/F",
+      "status": "J'ai postulé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "ALTERNANCE - Data Scientist H/F",
+      "status": "J'ai postulé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-178403 – Apprenti.e Projet Inspection robotisée avec IA F/H a bien été envoyée",
+      "status": "J'ai postulé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "AXA",
+      "role": "Ingénieur DevOps IA/LLM Apprenticeship h/f",
+      "status": "Refusé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": 14
+    },
+    {
+      "company": "BNP Paribas",
+      "role": "Alternance - Ingénieur Data & Reporting IT H/F",
+      "status": "Refusé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": 33
+    },
+    {
+      "company": "Thales",
+      "role": "Alternance - Ingénieur Data - satellite data solution as a service - F/H",
+      "status": "Refusé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": 106
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Automatisation des bancs de caractérisation orientée Data science - H/F (R0323411)",
+      "status": "Refusé",
+      "applied": "01/05/2026",
+      "appliedISO": "2026-05-01",
+      "maxStage": 1,
+      "responseDays": 106
+    },
+    {
+      "company": "GE HealthCare",
+      "role": "Alternant.e Data Engineer junior – Traitement de données de système médicaux H/F",
+      "status": "J'ai postulé",
+      "applied": "29/04/2026",
+      "appliedISO": "2026-04-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "GE HealthCare",
+      "role": "Alternance – Intégration de l’Intelligence Artificielle dans un Robot Médical (H/F)",
+      "status": "J'ai postulé",
+      "applied": "29/04/2026",
+      "appliedISO": "2026-04-29",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "GE HealthCare",
+      "role": "Alternance – Ingénieur.e données, analyse BI et automatisation avec l’IA H/F",
+      "status": "Refusé",
+      "applied": "29/04/2026",
+      "appliedISO": "2026-04-29",
+      "maxStage": 2,
+      "responseDays": 29
+    },
+    {
+      "company": "BNP Paribas",
+      "role": "Alternance - Data Engineer - H/F",
+      "status": "J'ai postulé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Moët Hennessy",
+      "role": "APPRENTICESHIP - Data Analyst",
+      "status": "J'ai postulé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE – Data Science / IA Digital Manufacturing - F/H (R0322720)",
+      "status": "J'ai un 1er entretien",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 2,
+      "responseDays": 16
+    },
+    {
+      "company": "Safran",
+      "role": "2026-175088 – Apprenti Ingénieur Data & IA Cloud (AWS) F/H",
+      "status": "Refusé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": 24
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur IA (F/H)",
+      "status": "Refusé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": 48
+    },
+    {
+      "company": "AXA",
+      "role": "Alternance - Data Analyst",
+      "status": "J'ai postulé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-177661 – Développement d'outils numériques par approche Data/IA pour la durée de vie F/H",
+      "status": "J'ai postulé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Génération de modèle de CAO 3D à partir d'IA générative - F/H (R0325072)",
+      "status": "Refusé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": 2
+    },
+    {
+      "company": "RTE",
+      "role": "Alternance - Ingénieur Data/IA F/H",
+      "status": "Refusé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": 30
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur IA & Knowledge (F/H)",
+      "status": "Refusé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": 109
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur Intelligence Artificielle (F/H)",
+      "status": "J'ai postulé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Schneider Electric",
+      "role": "Alternant - Ingénieur Data scientist F/H",
+      "status": "J'ai postulé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Moët Hennessy",
+      "role": "ALTERNANCE - Data/AI Product Owner",
+      "status": "Je suis pris",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 4,
+      "responseDays": 31
+    },
+    {
+      "company": "Moët Hennessy",
+      "role": "ALTERNANCE - AI Acceleration & Applied Innovation",
+      "status": "J'ai postulé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur IA et Automatisation (F/H)",
+      "status": "Refusé",
+      "applied": "28/04/2026",
+      "appliedISO": "2026-04-28",
+      "maxStage": 1,
+      "responseDays": 109
+    },
+    {
+      "company": "AMIAD",
+      "role": "Apprenti Master Calcul à Haute Performance",
+      "status": "Refusé",
+      "applied": "24/04/2026",
+      "appliedISO": "2026-04-24",
+      "maxStage": 1,
+      "responseDays": 24
+    },
+    {
+      "company": "AMIAD",
+      "role": "J'AI REFUSE   Alternant Extension de Torch Uncertainty : Quantification d’Incertaines pour Modèles de Deep Learning et Modèles Génératifs",
+      "status": "Je suis pris",
+      "applied": "24/04/2026",
+      "appliedISO": "2026-04-24",
+      "maxStage": 4,
+      "responseDays": 16
+    },
+    {
+      "company": "AMIAD",
+      "role": "Alternant ML OPS",
+      "status": "Refusé",
+      "applied": "24/04/2026",
+      "appliedISO": "2026-04-24",
+      "maxStage": 2,
+      "responseDays": 12
+    },
+    {
+      "company": "Valeo",
+      "role": "Ingénieur IA & Data domaine industriel (F/H)",
+      "status": "J'ai postulé",
+      "applied": "24/04/2026",
+      "appliedISO": "2026-04-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Natixis",
+      "role": "Alternance - 1/2 ans - Data Scientist IA/LLM F/H",
+      "status": "J'ai postulé",
+      "applied": "24/04/2026",
+      "appliedISO": "2026-04-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "2026-177662 – Alternance statistiques & data : Migration et amélioration d'applications de calculs statistiques",
+      "status": "Refusé",
+      "applied": "24/04/2026",
+      "appliedISO": "2026-04-24",
+      "maxStage": 1,
+      "responseDays": 112
+    },
+    {
+      "company": "Nokia",
+      "role": "Apprenticeship Applied R&D Engineer",
+      "status": "J'ai postulé",
+      "applied": "24/04/2026",
+      "appliedISO": "2026-04-24",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingenieur développement Outils et IA (F/H)",
+      "status": "Refusé",
+      "applied": "24/04/2026",
+      "appliedISO": "2026-04-24",
+      "maxStage": 1,
+      "responseDays": 112
+    },
+    {
+      "company": "PROPHESEE",
+      "role": "Event-based computer vision and processing internship",
+      "status": "Refusé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": 3
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur Electronique et IA - Brouillage de drone - F/H (R0322433)",
+      "status": "Refusé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": 118
+    },
+    {
+      "company": "BNP Paribas",
+      "role": "Alternance - Analyste des Risques Opérationnels & Data H/F",
+      "status": "Refusé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": 29
+    },
+    {
+      "company": "Boursobank",
+      "role": "Data Analyst - Alternance",
+      "status": "Refusé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": 31
+    },
+    {
+      "company": "BNP Paribas",
+      "role": "Alternance - Data Management Analyst - H/F",
+      "status": "J'ai postulé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE Ingénieur software robotique F/H (R0322368)",
+      "status": "Refusé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": 118
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Data Science & IA appliquées à la validation de données applicatives (F/H)",
+      "status": "Refusé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": 4
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "Alternance 2026 IA Gen Engineer H/F",
+      "status": "J'ai postulé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "ALTERNANCE - Data Scientist H/F",
+      "status": "J'ai postulé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Valeo",
+      "role": "Apprentissage : Ingénieur en Automatisation de Bancs d'Essais (H/F)",
+      "status": "J'ai postulé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur Optimisation de l’Inférence Intelligence Artificielle pour Images Satellites - F/H",
+      "status": "Refusé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": 118
+    },
+    {
+      "company": "Thales",
+      "role": "Alternance - Ingénieur traitement d'images – (H/F) (R0321605)",
+      "status": "Refusé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": 118
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "Alternance 2026 Data Scientist H/F",
+      "status": "J'ai postulé",
+      "applied": "19/04/2026",
+      "appliedISO": "2026-04-19",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "bioMérieux",
+      "role": "Alternance - BAC+5 - Data Science IA générative - F/H/D",
+      "status": "J'ai postulé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "bioMérieux",
+      "role": "Alternance - BAC+5 - Data Science ML sur données patients EHR - F/H/D",
+      "status": "J'ai postulé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "bioMérieux",
+      "role": "Alternance Data Science Bac+5 - Outil d'aide au design de la PCR (F/H/D)",
+      "status": "J'ai postulé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "Alternance – Ingénieur Fusion d’images satellite par IA (H/F)",
+      "status": "Refusé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": 61
+    },
+    {
+      "company": "Thales",
+      "role": "Alternance – Ingénieur(e) Intelligence Artificielle (R0324959)",
+      "status": "Refusé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": 36
+    },
+    {
+      "company": "Airbus",
+      "role": "ALT 2026 Apprenti(e) en Intelligence Artificielle et Quantification d'Incertitudes (h/f)",
+      "status": "Refusé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": 20
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "Alternance 2026 Data Scientist Credit International H/F",
+      "status": "J'ai postulé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "Alternance 2026 Analyste Quantitatif - Data Scientist - Validation des Modèles H/F",
+      "status": "Refusé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": 122
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Data Scientist Junior (F/H)",
+      "status": "J'ai postulé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Parrot",
+      "role": "Candidature spontanée",
+      "status": "Refusé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": 12
+    },
+    {
+      "company": "Inbolt",
+      "role": "Candidature spontanée alternance CV",
+      "status": "J'ai postulé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Renault",
+      "role": "AP26 - BAC +5 - Apprenti ingénieur robotique avec applications IA (H/F)",
+      "status": "Refusé",
+      "applied": "14/04/2026",
+      "appliedISO": "2026-04-14",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Schneider Electric",
+      "role": "Alternant Ingénieur Data Scientist F/H",
+      "status": "J'ai postulé",
+      "applied": "10/04/2026",
+      "appliedISO": "2026-04-10",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Schneider Electric",
+      "role": "Alternance – Data Scientist Generative AI & Computer Vision – F/H",
+      "status": "J'ai postulé",
+      "applied": "10/04/2026",
+      "appliedISO": "2026-04-10",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Safran",
+      "role": "Ingénieur IA & Data Science appliquée à l'Ingénierie F/H",
+      "status": "Refusé",
+      "applied": "10/04/2026",
+      "appliedISO": "2026-04-10",
+      "maxStage": 1,
+      "responseDays": 6
+    },
+    {
+      "company": "Thales",
+      "role": "Alternance - Ingénieur IA - Agents for satellite anomaly investigation - F/H (R0320668)",
+      "status": "Refusé",
+      "applied": "10/04/2026",
+      "appliedISO": "2026-04-10",
+      "maxStage": 1,
+      "responseDays": 126
+    },
+    {
+      "company": "ArianeGroup",
+      "role": "ALTERNANCE - Ingénieure / Ingénieur Machine Learning / CFD",
+      "status": "Refusé",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 1,
+      "responseDays": 0
+    },
+    {
+      "company": "ArianeGroup",
+      "role": "J'AI REFUSE   ALTERNANCE - Ingénieure / Ingénieur en Informatique/Data Science/IA - Traitement automatique et intelligent de documents techniques",
+      "status": "J'ai un 1er entretien",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 2,
+      "responseDays": 30
+    },
+    {
+      "company": "Natixis",
+      "role": "Alternance - 2 ans - Data scientist F/H",
+      "status": "J'ai postulé",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Data Scientist Junior (F/H)",
+      "status": "J'ai postulé",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur R&D Deep Learning - Aix-en-Provence (F/H)",
+      "status": "J'ai postulé",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur IA (F/H)",
+      "status": "J'ai postulé",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "GE HealthCare",
+      "role": "Alternance – Intégration de l’Intelligence Artificielle dans un Robot Médical (H/F)",
+      "status": "J'ai postulé",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "ArianeGroup",
+      "role": "ALTERNANCE - Ingénieure / Ingénieur informatique / IA",
+      "status": "J'ai postulé",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "ArianeGroup",
+      "role": "ALTERNANCE - Ingénieure / Ingénieur Data Science",
+      "status": "J'ai postulé",
+      "applied": "07/04/2026",
+      "appliedISO": "2026-04-07",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Renault",
+      "role": "AP26 - BAC +5 - Data scientist",
+      "status": "Refusé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": 12
+    },
+    {
+      "company": "MBDA",
+      "role": "Apprenti Ingénieur Développeur IA F/H",
+      "status": "Refusé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": 38
+    },
+    {
+      "company": "Harmattan AI",
+      "role": "Computer Vision Engineer",
+      "status": "J'ai postulé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Société Générale Assurances",
+      "role": "Data Scientist / Machine Learning Engineer",
+      "status": "J'ai postulé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE – Intégration de l’IA dans la discipline Ingénierie Système - F/H (R0322498)",
+      "status": "Refusé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": 4
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Data scientist - Modèles de fondation (F/H)",
+      "status": "J'ai postulé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Valeo",
+      "role": "Offre - Alternance Systèmes Embarqués & IA – Petite Mobilité (H/F)",
+      "status": "Refusé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": 133
+    },
+    {
+      "company": "Harmattan AI",
+      "role": "Candidature spontanée pour un poste de stagiaire ou alternant",
+      "status": "J'ai postulé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - World Models pour la génération d’assemblages CAO (F/H)",
+      "status": "Refusé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": 48
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Développeur logiciel (F/H)",
+      "status": "Refusé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": 23
+    },
+    {
+      "company": "Dassault Systèmes",
+      "role": "APPRENTISSAGE - Ingénieur IA - Recomposition de segmentation 3D (F/H)",
+      "status": "Refusé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": 38
+    },
+    {
+      "company": "Airbus",
+      "role": "Apprenti(e) en Intelligence Artificielle pour la Robotique (F/H)",
+      "status": "Refusé",
+      "applied": "04/04/2026",
+      "appliedISO": "2026-04-04",
+      "maxStage": 1,
+      "responseDays": 16
+    },
+    {
+      "company": "Schneider Electric",
+      "role": "Alternance – Data Scientist Generative AI & Computer Vision – F/H",
+      "status": "Refusé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": 1
+    },
+    {
+      "company": "Thales",
+      "role": "Alternance – Banc robotique rendez-vous – (H/F) (R0320174)",
+      "status": "Refusé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": 75
+    },
+    {
+      "company": "Stellantis",
+      "role": "Apprentissage : Utilisation de l'Intelligence Artificielle pour le développement du Carbon removal",
+      "status": "Refusé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": 0
+    },
+    {
+      "company": "Valeo",
+      "role": "Apprenti(e) \" Développement Logiciel Embarqué\" (F/H)",
+      "status": "Refusé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": 72
+    },
+    {
+      "company": "Sogeti",
+      "role": "Data Scientist - Alternance",
+      "status": "J'ai postulé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Etudes amonts des technologies d’IA et/ou combat collaboratif pour les besoins d’exécution des projets de défense aérienne - F/H (R0321717)",
+      "status": "J'ai postulé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "MBDA",
+      "role": "Apprenti Ingénieur Data Scientist en Détection d'Anomalies F/H",
+      "status": "J'ai un 2ème entretien",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 3,
+      "responseDays": 3
+    },
+    {
+      "company": "Safran",
+      "role": "2026-200657-175247 – Apprenti-e Construction d'agents pour la conversion de modèles mécaniques en modèles IA F/H",
+      "status": "Je suis pris",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 4,
+      "responseDays": 58
+    },
+    {
+      "company": "MBDA",
+      "role": "Apprenti Ingénieur en Développement de Simulations Numériques F/H",
+      "status": "Refusé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": 9
+    },
+    {
+      "company": "Framatome",
+      "role": "Alternance - Ingénieur Généraliste Développement IA/SciML Application Mécanique Thermo-Hydraulique H/F",
+      "status": "J'ai postulé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Framatome",
+      "role": "2026-25738 – Alternance - IA – Vision par Ordinateur & Séries Temporelles F/H",
+      "status": "Refusé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 2,
+      "responseDays": 20
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur développement IA Cinématique - F/H (R0322100)",
+      "status": "Refusé",
+      "applied": "31/03/2026",
+      "appliedISO": "2026-03-31",
+      "maxStage": 1,
+      "responseDays": 16
+    },
+    {
+      "company": "Safran",
+      "role": "Apprenti-e Imagerie multi/hyperspectrale pour la robotique mobile et l'inspection industrielle F/H",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 4,
+      "responseDays": 23
+    },
+    {
+      "company": "Safran",
+      "role": "REFUSE   Apprenti-e Développement de bibliothèques pour les algorithmes d'apprentissage - Composites F/H",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 2,
+      "responseDays": 13
+    },
+    {
+      "company": "Safran",
+      "role": "ALTERNANCE - Data Scientist Bureau d'Etudes « Support et Services » F/H",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Amundi",
+      "role": "Alternance - Développeur et intégrateur IA - H/F",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Amundi",
+      "role": "Alternance - Chargé d'Audit Data - H/F",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Amundi",
+      "role": "Alternance - Assistant Gestion d'actif Multi Asset - H/F",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Amundi",
+      "role": "Alternance - Analyste ESG - H/F",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Amundi",
+      "role": "Alternance - Data Analyst - Automatisation - H/F",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Edmond de Rothschild",
+      "role": "ALTERNANCE - BUSINESS AI (H/F)",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Bpifrance",
+      "role": "Ingénieur quantitatif F/H",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Valeo",
+      "role": "Alternant(e) - Ingénieur électronique radar (F/H)",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "Innovation et Ingénierie des Données F/H (R0321490)",
+      "status": "Je suis pris",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 4,
+      "responseDays": 63
+    },
+    {
+      "company": "Crédit Mutuel",
+      "role": "Alternant Ingénieur Statisticien / Analyste Quantitatif (H/F)",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": 76
+    },
+    {
+      "company": "MBDA",
+      "role": "Ingénieur en Systèmes Autonomes Intelligents F/H",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": 5
+    },
+    {
+      "company": "Samsung",
+      "role": "Alternant(e) AI/Data Engineer (H/F)",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": 6
+    },
+    {
+      "company": "Airbus",
+      "role": "ALT 2026 - Apprenti(e) en Identification Automatique dans le domaine du ROEM (h/f)",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": 29
+    },
+    {
+      "company": "Safran",
+      "role": "Stage - Deep Learning Scientist (H/F)",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": 23
+    },
+    {
+      "company": "Valeo",
+      "role": "R&D Trainee/Apprentice/VIE",
+      "status": "J'ai postulé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Google",
+      "role": "Software Engineer",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Google",
+      "role": "REFUSE Customer Engineer",
+      "status": "J'ai un 2ème entretien",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 3,
+      "responseDays": 25
+    },
+    {
+      "company": "Airbus",
+      "role": "ALT 2026 - Apprenti(e) en Développement d’algorithme IA embarqué (H/F)",
+      "status": "Refusé",
+      "applied": "25/03/2026",
+      "appliedISO": "2026-03-25",
+      "maxStage": 1,
+      "responseDays": 79
+    },
+    {
+      "company": "Valeo",
+      "role": "Stage - Recherche en Intelligence Artificielle / Conduite End-to-End (F/H)",
+      "status": "Refusé",
+      "applied": "24/03/2026",
+      "appliedISO": "2026-03-24",
+      "maxStage": 1,
+      "responseDays": 24
+    },
+    {
+      "company": "BNP Paribas",
+      "role": "Alternance - Data Engineer Risque de crédit (H/F) - 12/24 mois",
+      "status": "Refusé",
+      "applied": "23/03/2026",
+      "appliedISO": "2026-03-23",
+      "maxStage": 1,
+      "responseDays": 50
+    },
+    {
+      "company": "Amadeus",
+      "role": "Apprenticeship - Data Scientist",
+      "status": "Refusé",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 1,
+      "responseDays": 18
+    },
+    {
+      "company": "GE HealthCare",
+      "role": "Alternance – Intégration de l’Intelligence Artificielle dans un Robot Médical (H/F)",
+      "status": "J'ai postulé",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE – Responsable projet IA – F/H (R0319718)",
+      "status": "J'ai postulé",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Airbus",
+      "role": "REFUSE ALT2026 _ Apprenti Science des Données - Application GenAI pour le suivi de l'environnement (h/f)",
+      "status": "J'ai un 2ème entretien",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 3,
+      "responseDays": 5
+    },
+    {
+      "company": "Deloitte",
+      "role": "Consultant Junior Alternant - Data & Analytics F/H",
+      "status": "Refusé",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 1,
+      "responseDays": 33
+    },
+    {
+      "company": "Airbus",
+      "role": "ALT 2026- Jumeau numérique & IA pour les réseaux SATCOM (H/F)",
+      "status": "Refusé",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 1,
+      "responseDays": 3
+    },
+    {
+      "company": "Naval Group",
+      "role": "ALTERNANCE - Ingénieur Développement robotique pour les procédés de fabrication - H/F",
+      "status": "Refusé",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 1,
+      "responseDays": 18
+    },
+    {
+      "company": "Safran",
+      "role": "J'ai REFUSE ALTERNANCE - Data Scientist – Corporate AI Squad F/H",
+      "status": "J'ai un 1er entretien",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 2,
+      "responseDays": 34
+    },
+    {
+      "company": "RATP Group",
+      "role": "Alternant ML Engineer IAGen F/H (DSI/FAB)",
+      "status": "J'ai postulé",
+      "applied": "21/03/2026",
+      "appliedISO": "2026-03-21",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Alpine",
+      "role": "ALPINE CARS – AP26 – BAC+5 – Automatisation de validations véhicules",
+      "status": "J'ai postulé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "RTE",
+      "role": "Ingénieur Data/IA",
+      "status": "J'ai postulé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "ALTERNANCE - Data Scientist",
+      "status": "J'ai postulé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "AXA",
+      "role": "Alternance Data analyst IA",
+      "status": "J'ai postulé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Decathlon",
+      "role": "Junior Data Scientist - Apprenticeship",
+      "status": "J'ai postulé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "CHANEL",
+      "role": "Alternance - Assistant Ingénieur ML/IA, MLOps et LLMOps",
+      "status": "Refusé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": 33
+    },
+    {
+      "company": "Thales",
+      "role": "ALTERNANCE - Ingénieur IA pour l'Ingénierie Système Aéro",
+      "status": "Refusé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": 7
+    },
+    {
+      "company": "Natixis",
+      "role": "Alternance - 2 ans - Market Data Analyst",
+      "status": "J'ai postulé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Amazon",
+      "role": "Alternance Analyste Commercial & Data",
+      "status": "J'ai postulé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Framatome",
+      "role": "Alternance - Ingénieur –Développement IA & Machine Learning Scientifique",
+      "status": "Refusé",
+      "applied": "17/03/2026",
+      "appliedISO": "2026-03-17",
+      "maxStage": 1,
+      "responseDays": 0
+    },
+    {
+      "company": "Airbus",
+      "role": "ALT 2026 - Apprenti Développement d'outils de suivi de la qualité d'images satellites",
+      "status": "Refusé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": 40
+    },
+    {
+      "company": "Hermès",
+      "role": "ALT 2026 Apprenti(e) en développement logiciel IA & traitement d'image",
+      "status": "J'ai postulé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Airbus",
+      "role": "ALT 2026 Apprenti(e) en développement logiciel IA & traitement d'image",
+      "status": "Refusé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": 12
+    },
+    {
+      "company": "Société Générale Assurances",
+      "role": "Data-scientist IA Générative - Computer vision",
+      "status": "J'ai postulé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Airbus",
+      "role": "ALT 2026 - Apprenti(e) Ingénieur développement Software sur équipement Satellite",
+      "status": "Refusé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": 41
+    },
+    {
+      "company": "Canal+",
+      "role": "ALTERNANCE - DATA ANALYSTE PERFORMANCE",
+      "status": "J'ai postulé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": null
+    },
+    {
+      "company": "Groupe BPCE",
+      "role": "Alternance – Data Analyst",
+      "status": "Refusé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": 94
+    },
+    {
+      "company": "AXA",
+      "role": "Apprenticeship - Credit Analyst & AI",
+      "status": "Refusé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": 76
+    },
+    {
+      "company": "Valeo",
+      "role": "Alternant(e) Ingénieur Développement Logiciel HMI Embarqué",
+      "status": "Refusé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": 90
+    },
+    {
+      "company": "Crédit Agricole",
+      "role": "Encadrement MRM des modèles d'IA",
+      "status": "J'ai un 1er entretien",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 2,
+      "responseDays": 16
+    },
+    {
+      "company": "Natixis",
+      "role": "Data Science",
+      "status": "Refusé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": 76
+    },
+    {
+      "company": "Groupe BPCE",
+      "role": "Data Scientist Risques & IA",
+      "status": "Refusé",
+      "applied": "13/03/2026",
+      "appliedISO": "2026-03-13",
+      "maxStage": 1,
+      "responseDays": 155
+    }
+  ],
+  "outcome": {
+    "company": "Nokia",
+    "role": "Apprenticeship Artificial Intelligence",
+    "applied": "24/05/2026",
+    "responseDays": 10
+  }
+};

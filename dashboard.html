@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candidatures Alternance 2026 — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #08090c;
+    --bg-soft: #0d0f14;
+    --card: #101319;
+    --card-hover: #141822;
+    --border: rgba(255,255,255,.07);
+    --border-strong: rgba(255,255,255,.12);
+    --text: #f4f6fb;
+    --text-dim: #9aa3b2;
+    --text-faint: #5d6675;
+    --accent: #7c8cff;
+    --accent-2: #a78bfa;
+    --accent-soft: rgba(124,140,255,.12);
+    --green: #34d399;
+    --amber: #fbbf24;
+    --rose: #fb7185;
+    --blue: #60a5fa;
+    --grid: rgba(255,255,255,.05);
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 30px rgba(0,0,0,.25);
+    --radius: 18px;
+  }
+  [data-theme="light"] {
+    --bg: #f6f7f9;
+    --bg-soft: #eef0f4;
+    --card: #ffffff;
+    --card-hover: #fafbfc;
+    --border: rgba(15,20,30,.08);
+    --border-strong: rgba(15,20,30,.14);
+    --text: #11151c;
+    --text-dim: #5a6472;
+    --text-faint: #97a0ad;
+    --accent: #4f5bff;
+    --accent-2: #7c3aed;
+    --accent-soft: rgba(79,91,255,.08);
+    --green: #059669;
+    --amber: #d97706;
+    --rose: #e11d48;
+    --blue: #2563eb;
+    --grid: rgba(15,20,30,.06);
+    --shadow: 0 1px 2px rgba(15,20,30,.04), 0 10px 30px rgba(15,20,30,.06);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    transition: background .4s ease, color .4s ease;
+    background-image:
+      radial-gradient(900px 500px at 12% -8%, rgba(124,140,255,.08), transparent 60%),
+      radial-gradient(800px 500px at 100% 0%, rgba(167,139,250,.06), transparent 55%);
+    background-attachment: fixed;
+  }
+  .wrap { max-width: 1340px; margin: 0 auto; padding: 38px 28px 80px; }
+
+  /* Header */
+  header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 34px; flex-wrap: wrap; }
+  .title-block h1 { font-size: 30px; font-weight: 800; letter-spacing: -.025em; line-height: 1.1; }
+  .title-block h1 .grad {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .subtitle { color: var(--text-dim); font-size: 14.5px; margin-top: 8px; max-width: 620px; }
+  .meta-pills { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .pill {
+    font-size: 12px; color: var(--text-dim); background: var(--card);
+    border: 1px solid var(--border); padding: 5px 11px; border-radius: 100px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .pill b { color: var(--text); font-weight: 600; }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+  .theme-toggle {
+    background: var(--card); border: 1px solid var(--border); color: var(--text-dim);
+    width: 42px; height: 42px; border-radius: 12px; cursor: pointer; font-size: 18px;
+    display: grid; place-items: center; transition: all .2s; flex-shrink: 0;
+  }
+  .theme-toggle:hover { background: var(--card-hover); color: var(--text); border-color: var(--border-strong); }
+
+  /* Grid */
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 22px; box-shadow: var(--shadow); position: relative;
+    transition: border-color .25s, transform .25s;
+  }
+  .card:hover { border-color: var(--border-strong); }
+  .card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; gap: 12px; }
+  .card-title { font-size: 14px; font-weight: 600; letter-spacing: -.01em; }
+  .card-sub { font-size: 12px; color: var(--text-faint); margin-top: 2px; font-weight: 400; }
+
+  .col-3 { grid-column: span 3; } .col-4 { grid-column: span 4; }
+  .col-5 { grid-column: span 5; } .col-6 { grid-column: span 6; }
+  .col-7 { grid-column: span 7; } .col-8 { grid-column: span 8; }
+  .col-12 { grid-column: span 12; }
+
+  /* KPI cards */
+  .kpi { display: flex; flex-direction: column; gap: 10px; min-height: 132px; justify-content: space-between; overflow: hidden; }
+  .kpi .ico {
+    width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center;
+    background: var(--accent-soft); color: var(--accent); font-size: 18px;
+  }
+  .kpi .val { font-size: 34px; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; line-height: 1; }
+  .kpi .lab { font-size: 13px; color: var(--text-dim); font-weight: 500; }
+  .kpi .trend { font-size: 12px; font-weight: 600; }
+  .kpi.accent .ico { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; }
+  .kpi.green .ico { background: rgba(52,211,153,.14); color: var(--green); }
+  .kpi.rose .ico { background: rgba(251,113,133,.14); color: var(--rose); }
+  .kpi.amber .ico { background: rgba(251,191,36,.14); color: var(--amber); }
+  .up { color: var(--green); } .down { color: var(--rose); } .neutral { color: var(--text-faint); }
+
+  /* Funnel */
+  .funnel { display: flex; flex-direction: column; gap: 12px; }
+  .funnel-row { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 16px; }
+  .funnel-label { font-size: 13px; color: var(--text-dim); font-weight: 500; }
+  .funnel-bar-wrap { position: relative; height: 42px; }
+  .funnel-bar {
+    height: 100%; border-radius: 10px; display: flex; align-items: center; padding: 0 14px;
+    color: #fff; font-weight: 700; font-size: 14px; min-width: 54px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transition: width 1s cubic-bezier(.22,1,.36,1); box-shadow: 0 4px 16px rgba(124,140,255,.22);
+  }
+  .funnel-bar .pct { margin-left: auto; font-size: 12px; font-weight: 500; opacity: .85; }
+  .funnel-bar.s2 { background: linear-gradient(90deg, #5b6bf0, #7c8cff); }
+  .funnel-bar.s3 { background: linear-gradient(90deg, #7c8cff, var(--accent-2)); }
+  .funnel-bar.s4 { background: linear-gradient(90deg, var(--green), #5eead4); box-shadow: 0 4px 16px rgba(52,211,153,.25); }
+
+  /* Outcome card */
+  .outcome-card .card-head { align-items: flex-start; }
+  .outcome-body { display: flex; flex-direction: column; gap: 18px; }
+  .outcome-company { display: flex; align-items: center; gap: 14px; }
+  .outcome-ico {
+    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+    font-size: 20px; background: rgba(52,211,153,.14); color: var(--green); flex-shrink: 0;
+  }
+  .outcome-name { font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
+  .outcome-role { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
+  .outcome-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .outcome-stat {
+    display: flex; flex-direction: column; gap: 3px; background: var(--bg-soft);
+    border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px;
+  }
+  .outcome-stat .v { font-size: 17px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .outcome-stat .l { font-size: 10.5px; color: var(--text-faint); font-weight: 500; }
+  .outcome-note { font-size: 12.5px; color: var(--text-dim); line-height: 1.55; }
+
+  /* Chart canvas sizing */
+  .chart-box { position: relative; width: 100%; }
+  .h-260 { height: 260px; } .h-300 { height: 300px; } .h-220 { height: 220px; }
+
+  /* Heatmap */
+  .heat-scroll { overflow-x: auto; padding-bottom: 6px; }
+  .heat { display: inline-grid; grid-auto-flow: column; grid-template-rows: repeat(7, 1fr); gap: 4px; }
+  .heat .cell { width: 15px; height: 15px; border-radius: 4px; background: var(--grid); transition: transform .1s; cursor: default; }
+  .heat .cell:hover { transform: scale(1.25); outline: 1px solid var(--border-strong); }
+  .heat-months { display: flex; gap: 4px; margin-bottom: 6px; padding-left: 30px; font-size: 11px; color: var(--text-faint); }
+  .heat-wrap { display: flex; gap: 8px; }
+  .heat-days { display: grid; grid-template-rows: repeat(7,1fr); gap: 4px; font-size: 10px; color: var(--text-faint); padding-top: 0; }
+  .heat-days span { height: 15px; line-height: 15px; }
+  .heat-legend { display: flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 11.5px; color: var(--text-faint); justify-content: flex-end; }
+  .heat-legend .cell { width: 13px; height: 13px; border-radius: 3px; }
+
+  /* Table */
+  .table-tools { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .search {
+    background: var(--bg-soft); border: 1px solid var(--border); color: var(--text);
+    padding: 8px 13px; border-radius: 10px; font-size: 13px; font-family: inherit; width: 230px;
+    outline: none; transition: border-color .2s;
+  }
+  .search:focus { border-color: var(--accent); }
+  .seg { display: flex; background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px; padding: 3px; gap: 2px; }
+  .seg button {
+    background: transparent; border: none; color: var(--text-dim); font-family: inherit;
+    font-size: 12.5px; font-weight: 500; padding: 6px 12px; border-radius: 7px; cursor: pointer; transition: all .18s;
+  }
+  .seg button.active { background: var(--accent); color: #fff; }
+  .seg button:not(.active):hover { color: var(--text); }
+
+  .tbl-scroll { max-height: 460px; overflow-y: auto; margin: 0 -6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    position: sticky; top: 0; background: var(--card); text-align: left; padding: 10px 12px;
+    font-size: 11.5px; font-weight: 600; color: var(--text-faint); text-transform: uppercase;
+    letter-spacing: .04em; border-bottom: 1px solid var(--border); z-index: 1;
+  }
+  tbody td { padding: 11px 12px; border-bottom: 1px solid var(--border); color: var(--text-dim); }
+  tbody tr:hover td { background: var(--card-hover); }
+  td.company { color: var(--text); font-weight: 600; }
+  td.role { max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .badge { font-size: 11.5px; font-weight: 600; padding: 3px 9px; border-radius: 100px; display: inline-block; white-space: nowrap; }
+  .b-applied { background: rgba(124,140,255,.14); color: var(--accent); }
+  .b-rej { background: rgba(251,113,133,.13); color: var(--rose); }
+  .b-int { background: rgba(251,191,36,.14); color: var(--amber); }
+  .b-int2 { background: rgba(96,165,250,.14); color: var(--blue); }
+  .b-job { background: rgba(52,211,153,.15); color: var(--green); }
+  .tbl-count { font-size: 12px; color: var(--text-faint); }
+
+  /* mini legend for charts */
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; }
+  .legend .it { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-dim); }
+  .legend .sw { width: 11px; height: 11px; border-radius: 3px; }
+
+  footer { margin-top: 40px; text-align: center; color: var(--text-faint); font-size: 12px; }
+
+  .fade { opacity: 0; transform: translateY(14px); animation: rise .6s cubic-bezier(.22,1,.36,1) forwards; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+
+  @media (max-width: 1100px) {
+    .col-3 { grid-column: span 6; } .col-4 { grid-column: span 6; }
+    .col-5,.col-7,.col-8 { grid-column: span 12; } .col-6 { grid-column: span 12; }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding: 24px 14px 60px; }
+    .col-3 { grid-column: span 12; }
+    .funnel-row { grid-template-columns: 110px 1fr; }
+    .search { width: 100%; }
+  }
+  /* Scrollbars */
+  ::-webkit-scrollbar { height: 9px; width: 9px; }
+  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="fade">
+    <div class="title-block">
+      <h1>Candidatures <span class="grad">Alternance 2026</span></h1>
+      <p class="subtitle">Tableau de bord de suivi — préparation des données (regroupement des entreprises, reconstruction du parcours) puis visualisation du pipeline de candidatures.</p>
+      <div class="meta-pills" id="metaPills"></div>
+    </div>
+    <button class="theme-toggle" id="themeBtn" title="Changer de thème">◐</button>
+  </header>
+
+  <!-- KPIs -->
+  <div class="grid" style="margin-bottom:18px;">
+    <div class="card kpi accent col-3 fade" style="animation-delay:.05s">
+      <div class="ico">📨</div>
+      <div><div class="val" id="kTotal">—</div><div class="lab">Candidatures envoyées</div></div>
+      <div class="trend neutral" id="kTotalSub"></div>
+    </div>
+    <div class="card kpi col-3 fade" style="animation-delay:.1s">
+      <div class="ico">🏢</div>
+      <div><div class="val" id="kComp">—</div><div class="lab">Entreprises ciblées</div></div>
+      <div class="trend neutral" id="kCompSub"></div>
+    </div>
+    <div class="card kpi amber col-3 fade" style="animation-delay:.15s">
+      <div class="ico">🎯</div>
+      <div><div class="val" id="kInt">—</div><div class="lab">Entretiens décrochés</div></div>
+      <div class="trend up" id="kIntSub"></div>
+    </div>
+    <div class="card kpi green col-3 fade" style="animation-delay:.2s">
+      <div class="ico">⏱️</div>
+      <div><div class="val" id="kResp">—</div><div class="lab">Délai moyen de réponse</div></div>
+      <div class="trend neutral" id="kRespSub"></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- Funnel -->
+    <div class="card col-7 fade" style="animation-delay:.25s">
+      <div class="card-head">
+        <div><div class="card-title">Pipeline de conversion</div>
+        <div class="card-sub">Étape la plus avancée atteinte par candidature</div></div>
+      </div>
+      <div class="funnel" id="funnel"></div>
+    </div>
+
+    <!-- Outcome -->
+    <div class="card col-5 fade outcome-card" style="animation-delay:.3s">
+      <div class="card-head">
+        <div><div class="card-title">Résultat final</div>
+        <div class="card-sub">Où ce pipeline a mené</div></div>
+        <span class="badge b-job">Offre acceptée ✓</span>
+      </div>
+      <div class="outcome-body" id="outcomeBody"></div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="card col-8 fade" style="animation-delay:.35s">
+      <div class="card-head"><div><div class="card-title">Activité dans le temps</div>
+        <div class="card-sub">Candidatures par semaine et total cumulé</div></div></div>
+      <div class="chart-box h-300"><canvas id="timeChart"></canvas></div>
+    </div>
+
+    <!-- Response time -->
+    <div class="card col-4 fade" style="animation-delay:.4s">
+      <div class="card-head"><div><div class="card-title">Délai de réponse</div>
+        <div class="card-sub">Temps avant 1er retour</div></div></div>
+      <div class="chart-box h-300"><canvas id="respChart"></canvas></div>
+    </div>
+
+    <!-- Top companies -->
+    <div class="card col-7 fade" style="animation-delay:.45s">
+      <div class="card-head"><div><div class="card-title">Top entreprises ciblées</div>
+        <div class="card-sub">Nombre de candidatures · entretiens obtenus</div></div></div>
+      <div class="chart-box" id="topBox"><canvas id="topChart"></canvas></div>
+      <div class="legend" id="topLegend"></div>
+    </div>
+
+    <!-- Role themes -->
+    <div class="card col-5 fade" style="animation-delay:.5s">
+      <div class="card-head"><div><div class="card-title">Thèmes des postes visés</div>
+        <div class="card-sub">Mentions par thématique (un poste peut compter plusieurs fois)</div></div></div>
+      <div class="chart-box" id="themeBox"><canvas id="themeChart"></canvas></div>
+    </div>
+
+    <!-- Heatmap -->
+    <div class="card col-12 fade" style="animation-delay:.55s">
+      <div class="card-head"><div><div class="card-title">Calendrier d'activité</div>
+        <div class="card-sub">Intensité quotidienne des candidatures</div></div></div>
+      <div class="heat-scroll">
+        <div class="heat-months" id="heatMonths"></div>
+        <div class="heat-wrap">
+          <div class="heat-days"><span></span><span>Lun</span><span></span><span>Mer</span><span></span><span>Ven</span><span></span></div>
+          <div class="heat" id="heat"></div>
+        </div>
+      </div>
+      <div class="heat-legend">Moins
+        <span class="cell" data-l="0"></span><span class="cell" data-l="1"></span>
+        <span class="cell" data-l="2"></span><span class="cell" data-l="3"></span>
+        <span class="cell" data-l="4"></span> Plus
+      </div>
+    </div>
+
+    <!-- weekday + hour -->
+    <div class="card col-6 fade" style="animation-delay:.6s">
+      <div class="card-head"><div><div class="card-title">Rythme par jour de la semaine</div>
+        <div class="card-sub">Quand les candidatures sont envoyées</div></div></div>
+      <div class="chart-box h-260"><canvas id="weekdayChart"></canvas></div>
+    </div>
+    <div class="card col-6 fade" style="animation-delay:.65s">
+      <div class="card-head"><div><div class="card-title">Taux de conversion en entretien</div>
+        <div class="card-sub">Entreprises avec ≥ 3 candidatures</div></div></div>
+      <div class="chart-box h-260"><canvas id="convChart"></canvas></div>
+    </div>
+
+    <!-- Table -->
+    <div class="card col-12 fade" style="animation-delay:.7s">
+      <div class="card-head" style="align-items:flex-start;">
+        <div><div class="card-title">Détail des candidatures</div>
+        <div class="card-sub"><span id="tblCount" class="tbl-count"></span></div></div>
+        <div class="table-tools">
+          <input class="search" id="search" placeholder="Rechercher entreprise / poste…">
+          <div class="seg" id="statusSeg">
+            <button class="active" data-f="all">Toutes</button>
+            <button data-f="int">Entretiens</button>
+            <button data-f="rej">Refusées</button>
+            <button data-f="wait">En cours</button>
+          </div>
+        </div>
+      </div>
+      <div class="tbl-scroll">
+        <table>
+          <thead><tr><th>Entreprise</th><th>Poste</th><th>Statut</th><th>Candidature</th><th>Délai</th></tr></thead>
+          <tbody id="tblBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Données préparées via <code>prepare_data.py</code> · <span id="genAt"></span> · <span id="genCounts"></span>
+  </footer>
+</div>
+
+<script src="dashboard_data.js"></script>
+<script>
+const D = DASHBOARD_DATA;
+let charts = [];
+
+/* ---------- theme helpers ---------- */
+function css(v){ return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+function theme(){
+  return {
+    text: css('--text'), dim: css('--text-dim'), faint: css('--text-faint'),
+    grid: css('--grid'), accent: css('--accent'), accent2: css('--accent-2'),
+    green: css('--green'), amber: css('--amber'), rose: css('--rose'), blue: css('--blue'),
+    card: css('--card'),
+  };
+}
+function hexA(hex, a){
+  hex = hex.replace('#','');
+  if(hex.length===3) hex = hex.split('').map(c=>c+c).join('');
+  const n = parseInt(hex,16);
+  return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;
+}
+
+/* ---------- meta + KPIs ---------- */
+function fillMeta(){
+  const m = D.meta, k = D.kpis;
+  document.getElementById('metaPills').innerHTML = `
+    <span class="pill"><span class="dot"></span>${m.dateMin} – ${m.dateMax}</span>
+    <span class="pill"><b>${k.offers}</b> offre(s) atteinte(s)</span>
+    <span class="pill"><b>${k.pending}</b> en cours</span>
+    <span class="pill">Données nettoyées · ${m.duplicates} doublon retiré du compte</span>`;
+  document.getElementById('genAt').textContent = 'généré le ' + m.generatedAt;
+  document.getElementById('genCounts').textContent = `${k.total} candidatures, ${k.uniqueCompanies} entreprises après regroupement`;
+
+  document.getElementById('kTotal').textContent = k.total;
+  document.getElementById('kTotalSub').innerHTML = `<span class="down">${k.rejected} refus (${k.rejectRate}%)</span>`;
+  document.getElementById('kComp').textContent = k.uniqueCompanies;
+  document.getElementById('kCompSub').textContent = `≈ ${(k.total/k.uniqueCompanies).toFixed(1)} candidatures / entreprise`;
+  document.getElementById('kInt').textContent = k.interviews;
+  document.getElementById('kIntSub').innerHTML = `<span class="up">taux d'entretien ${k.interviewRate}%</span>`;
+  document.getElementById('kResp').innerHTML = `${k.avgResponse}<span style="font-size:17px;font-weight:600;color:var(--text-faint)"> j</span>`;
+  document.getElementById('kRespSub').textContent = `médiane ${k.medianResponse} j`;
+}
+
+/* ---------- funnel ---------- */
+function fillFunnel(){
+  const max = D.funnel[0].count;
+  const cls = ['', 's2', 's3', 's4'];
+  document.getElementById('funnel').innerHTML = D.funnel.map((f,i)=>{
+    const w = Math.max(6, f.count/max*100);
+    const pct = i===0 ? '100%' : (f.count/max*100).toFixed(1)+'%';
+    return `<div class="funnel-row">
+      <div class="funnel-label">${f.stage}</div>
+      <div class="funnel-bar-wrap">
+        <div class="funnel-bar ${cls[i]}" style="width:0%" data-w="${w}">
+          ${f.count}<span class="pct">${pct}</span>
+        </div>
+      </div></div>`;
+  }).join('');
+  requestAnimationFrame(()=> setTimeout(()=>{
+    document.querySelectorAll('.funnel-bar').forEach(b=> b.style.width = b.dataset.w+'%');
+  }, 120));
+}
+
+/* ---------- outcome ---------- */
+function fillOutcome(){
+  const o = D.outcome, k = D.kpis;
+  if(!o){ document.getElementById('outcomeBody').innerHTML = '<p class="outcome-note">Toujours en cours.</p>'; return; }
+  document.getElementById('outcomeBody').innerHTML = `
+    <div class="outcome-company">
+      <div class="outcome-ico">🏁</div>
+      <div>
+        <div class="outcome-name">${o.company}</div>
+        <div class="outcome-role">${o.role}</div>
+      </div>
+    </div>
+    <div class="outcome-stats">
+      <div class="outcome-stat"><span class="v">${o.applied}</span><span class="l">Candidature envoyée</span></div>
+      <div class="outcome-stat"><span class="v">${o.responseDays!=null ? o.responseDays+' j' : '—'}</span><span class="l">avant 1er retour</span></div>
+      <div class="outcome-stat"><span class="v">${k.total}</span><span class="l">candidatures au total</span></div>
+    </div>
+    <p class="outcome-note">Sur ${k.uniqueCompanies} entreprises contactées et ${k.interviews} entretiens décrochés, cette candidature a mené à l'alternance retenue.</p>`;
+}
+
+/* ---------- charts ---------- */
+function baseOpts(t){
+  return {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false},
+      tooltip:{ backgroundColor:t.card, titleColor:t.text, bodyColor:t.dim,
+        borderColor:hexA(t.faint,.3), borderWidth:1, padding:10, cornerRadius:8,
+        titleFont:{family:'Inter',weight:'600'}, bodyFont:{family:'Inter'} } },
+  };
+}
+
+function buildCharts(){
+  charts.forEach(c=>c.destroy()); charts = [];
+  const t = theme();
+  Chart.defaults.font.family = 'Inter';
+  Chart.defaults.color = t.faint;
+
+  /* timeline area + cumulative */
+  const ts = D.weeklySeries;
+  const g = document.getElementById('timeChart').getContext('2d');
+  const grd = g.createLinearGradient(0,0,0,300);
+  grd.addColorStop(0, hexA(t.accent,.35)); grd.addColorStop(1, hexA(t.accent,0));
+  charts.push(new Chart(g, {
+    data:{ labels:ts.map(x=>x.label),
+      datasets:[
+        { type:'line', label:'Cumulé', data:ts.map(x=>x.cumulative), yAxisID:'y1',
+          borderColor:t.accent2, borderWidth:2, pointRadius:0, tension:.4 },
+        { type:'bar', label:'Par semaine', data:ts.map(x=>x.count), yAxisID:'y',
+          backgroundColor:grd, borderColor:t.accent, borderWidth:1.5, borderRadius:5, barThickness:'flex', maxBarThickness:26 },
+      ]},
+    options:{...baseOpts(t),
+      plugins:{...baseOpts(t).plugins, legend:{display:true, position:'top', align:'end',
+        labels:{usePointStyle:true, pointStyleWidth:8, boxHeight:6, color:t.dim, font:{size:12}}}},
+      scales:{
+        x:{ grid:{display:false}, ticks:{color:t.faint, font:{size:11}, maxRotation:0, autoSkip:true, maxTicksLimit:10}},
+        y:{ grid:{color:t.grid}, ticks:{color:t.faint, precision:0}, title:{display:true,text:'/ semaine',color:t.faint,font:{size:10}}},
+        y1:{ position:'right', grid:{display:false}, ticks:{color:t.faint, precision:0}, title:{display:true,text:'cumulé',color:t.faint,font:{size:10}}},
+      }}
+  }));
+
+  /* response buckets */
+  const rb = D.responseBuckets;
+  charts.push(new Chart(document.getElementById('respChart'), {
+    type:'bar',
+    data:{ labels:rb.map(x=>x.bucket), datasets:[{ data:rb.map(x=>x.count),
+      backgroundColor:hexA(t.amber,.85), borderRadius:6, maxBarThickness:46 }]},
+    options:{...baseOpts(t),
+      scales:{ x:{grid:{display:false}, ticks:{color:t.faint, font:{size:11}}},
+        y:{grid:{color:t.grid}, ticks:{color:t.faint, precision:0}}}}
+  }));
+
+  /* top companies horizontal stacked (applied vs interviews) */
+  const tc = D.topCompanies;
+  document.getElementById('topBox').style.height = (tc.length*30+24)+'px';
+  charts.push(new Chart(document.getElementById('topChart'), {
+    type:'bar',
+    data:{ labels:tc.map(x=>x.company),
+      datasets:[
+        { label:'Sans suite / refus', data:tc.map(x=>x.count-x.interviews),
+          backgroundColor:hexA(t.accent,.55), borderRadius:{topRight:0,bottomRight:0,topLeft:5,bottomLeft:5}, stack:'s', barThickness:16 },
+        { label:'Avec entretien', data:tc.map(x=>x.interviews),
+          backgroundColor:t.amber, borderRadius:5, stack:'s', barThickness:16 },
+      ]},
+    options:{...baseOpts(t), indexAxis:'y',
+      scales:{ x:{stacked:true, grid:{color:t.grid}, ticks:{color:t.faint, precision:0}},
+        y:{stacked:true, grid:{display:false}, ticks:{color:t.dim, font:{size:12}}}}}
+  }));
+  document.getElementById('topLegend').innerHTML =
+    `<div class="it"><span class="sw" style="background:${hexA(t.accent,.55)}"></span>Candidatures</div>
+     <div class="it"><span class="sw" style="background:${t.amber}"></span>Dont entretien décroché</div>`;
+
+  /* role themes */
+  const th = D.roleThemes;
+  document.getElementById('themeBox').style.height = (th.length*28+24)+'px';
+  charts.push(new Chart(document.getElementById('themeChart'), {
+    type:'bar',
+    data:{ labels:th.map(x=>x.theme), datasets:[{ data:th.map(x=>x.count),
+      backgroundColor:th.map((_,i)=> hexA(i%2?t.accent2:t.accent,.85)), borderRadius:5, barThickness:15 }]},
+    options:{...baseOpts(t), indexAxis:'y',
+      scales:{ x:{grid:{color:t.grid}, ticks:{color:t.faint, precision:0}},
+        y:{grid:{display:false}, ticks:{color:t.dim, font:{size:12}}}}}
+  }));
+
+  /* weekday */
+  const wd = D.byWeekday;
+  charts.push(new Chart(document.getElementById('weekdayChart'), {
+    type:'bar',
+    data:{ labels:wd.map(x=>x.day.slice(0,3)), datasets:[{ data:wd.map(x=>x.count),
+      backgroundColor:wd.map((x,i)=> i>=5?hexA(t.faint,.5):hexA(t.accent,.85)), borderRadius:6, maxBarThickness:44 }]},
+    options:{...baseOpts(t),
+      scales:{ x:{grid:{display:false}, ticks:{color:t.faint, font:{size:11}}},
+        y:{grid:{color:t.grid}, ticks:{color:t.faint, precision:0}}}}
+  }));
+
+  /* conversion rate */
+  const cv = D.companyConversion;
+  charts.push(new Chart(document.getElementById('convChart'), {
+    type:'bar',
+    data:{ labels:cv.map(x=>x.company), datasets:[{ data:cv.map(x=>x.rate),
+      backgroundColor:cv.map(x=> x.rate>0?hexA(t.green,.85):hexA(t.faint,.4)), borderRadius:5, barThickness:14 }]},
+    options:{...baseOpts(t), indexAxis:'y',
+      plugins:{...baseOpts(t).plugins, tooltip:{...baseOpts(t).plugins.tooltip,
+        callbacks:{ label:c=> ` ${c.parsed.x}% (${cv[c.dataIndex].interviews}/${cv[c.dataIndex].applied})` }}},
+      scales:{ x:{grid:{color:t.grid}, ticks:{color:t.faint, callback:v=>v+'%'}, max:Math.max(40, Math.ceil(Math.max(...cv.map(x=>x.rate))/10)*10)},
+        y:{grid:{display:false}, ticks:{color:t.dim, font:{size:12}}}}}
+  }));
+}
+
+/* ---------- heatmap ---------- */
+function buildHeat(){
+  const counts = {}; D.timelineDaily.forEach(d=> counts[d.date]=d.count);
+  const dates = D.timelineDaily.map(d=>d.date).sort();
+  let start = new Date(dates[0]); let end = new Date(dates[dates.length-1]);
+  // commencer au lundi de la 1re semaine
+  const startDay = (start.getDay()+6)%7;
+  start.setDate(start.getDate()-startDay);
+  const max = Math.max(...Object.values(counts));
+  const level = c => c===0?0 : c<=Math.ceil(max*0.15)?1 : c<=Math.ceil(max*0.35)?2 : c<=Math.ceil(max*0.6)?3 : 4;
+  const palette = ['var(--grid)', hexA(css('--accent'),.28), hexA(css('--accent'),.5), hexA(css('--accent'),.75), css('--accent')];
+
+  const heat = document.getElementById('heat'); heat.innerHTML='';
+  const monthsEl = document.getElementById('heatMonths'); monthsEl.innerHTML='';
+  const MONTHS=['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Aoû','Sep','Oct','Nov','Déc'];
+  let cur = new Date(start); let lastMonth=-1; const weekCols=[];
+  while(cur<=end){
+    for(let r=0;r<7;r++){
+      const iso = cur.toISOString().slice(0,10);
+      const c = counts[iso]||0;
+      const cell = document.createElement('div');
+      cell.className='cell';
+      cell.style.background = palette[level(c)];
+      const dd = cur.toLocaleDateString('fr-FR',{day:'numeric',month:'long'});
+      cell.title = c>0 ? `${c} candidature${c>1?'s':''} · ${dd}` : `Aucune · ${dd}`;
+      heat.appendChild(cell);
+      cur.setDate(cur.getDate()+1);
+    }
+  }
+  // month labels (approx: one per ~4.3 weeks)
+  let d2 = new Date(start); const totalWeeks = Math.ceil((end-start)/(7*864e5))+1;
+  for(let w=0; w<totalWeeks; w++){
+    const m = d2.getMonth();
+    const span = document.createElement('span');
+    span.style.width='15px';
+    span.textContent = (m!==lastMonth)? MONTHS[m] : '';
+    if(m!==lastMonth){ span.style.minWidth='30px'; lastMonth=m; }
+    monthsEl.appendChild(span);
+    d2.setDate(d2.getDate()+7);
+  }
+  // legend swatches
+  document.querySelectorAll('.heat-legend .cell').forEach(el=>{
+    el.style.background = palette[+el.dataset.l];
+  });
+}
+
+/* ---------- table ---------- */
+function badge(a){
+  const s=a.status, st=a.maxStage;
+  if(/pris/i.test(s)) return '<span class="badge b-job">Offre reçue ✓</span>';
+  if(/refus/i.test(s)) return `<span class="badge b-rej">Refusé${st>=2?' (après entretien)':''}</span>`;
+  if(/2.?me/i.test(s)) return '<span class="badge b-int2">2ème entretien</span>';
+  if(/1er/i.test(s)) return '<span class="badge b-int">1er entretien</span>';
+  return '<span class="badge b-applied">En cours</span>';
+}
+let curFilter='all', curSearch='';
+function renderTable(){
+  const q = curSearch.toLowerCase();
+  const rows = D.applications.filter(a=>{
+    if(curFilter==='int' && a.maxStage<2) return false;
+    if(curFilter==='rej' && !/refus/i.test(a.status)) return false;
+    if(curFilter==='wait' && (/refus/i.test(a.status) || /pris/i.test(a.status))) return false;
+    if(q && !(a.company.toLowerCase().includes(q) || a.role.toLowerCase().includes(q))) return false;
+    return true;
+  });
+  document.getElementById('tblBody').innerHTML = rows.map(a=>`
+    <tr><td class="company">${a.company}</td>
+    <td class="role" title="${a.role.replace(/"/g,'&quot;')}">${a.role||'—'}</td>
+    <td>${badge(a)}</td><td>${a.applied||'—'}</td>
+    <td>${a.responseDays!=null? a.responseDays+' j':'—'}</td></tr>`).join('')
+    || `<tr><td colspan="5" style="text-align:center;padding:30px;color:var(--text-faint)">Aucun résultat</td></tr>`;
+  document.getElementById('tblCount').textContent = `${rows.length} candidature(s) affichée(s) sur ${D.applications.length}`;
+}
+
+/* ---------- init ---------- */
+fillMeta(); fillFunnel(); fillOutcome(); buildCharts(); buildHeat(); renderTable();
+
+document.getElementById('search').addEventListener('input', e=>{ curSearch=e.target.value; renderTable(); });
+document.getElementById('statusSeg').addEventListener('click', e=>{
+  if(e.target.tagName!=='BUTTON') return;
+  document.querySelectorAll('#statusSeg button').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active'); curFilter=e.target.dataset.f; renderTable();
+});
+document.getElementById('themeBtn').addEventListener('click', ()=>{
+  const el=document.documentElement;
+  el.dataset.theme = el.dataset.theme==='dark'?'light':'dark';
+  buildCharts(); buildHeat();
+});
+</script>
+</body>
+</html>
