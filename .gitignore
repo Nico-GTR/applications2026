@@ -2,10 +2,9 @@
 *.csv
 
 # Le repo ne publie que la page et ses données ; tout le reste (script de
-# préparation, README de dev, licence) reste local uniquement.
+# préparation, licence) reste local uniquement.
 prepare_data.py
 LICENSE
-README.md
 
 # Python
 __pycache__/
